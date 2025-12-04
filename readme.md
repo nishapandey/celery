@@ -43,3 +43,13 @@ sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
 
 
 
+start locally:
+update email/ app password/ to list in the settings.py
+
+python manage.py runserver
+
+sudo systemctl enable --now rabbitmq-server
+
+celery -A proj worker -l info
+
+
