@@ -25,7 +25,7 @@ all the configs are read from main app (proj) settings.py
 # gmail_send/settings.py
 
 
-urls import views and functions from app2
+urls import views from app2
 
 Rabbit MQ commands:
 
