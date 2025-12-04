@@ -1,4 +1,10 @@
-commands used
+# Django + Celery Demo Project
+
+A Django web app with two apps (app1, app2). Users submit reviews via a web form at `/reviews/`, which triggers an async Celery task to send email notifications. Celery workers process tasks in the background using RabbitMQ as the message broker, keeping the web response fast while emails are sent asynchronously.
+
+---
+
+## Commands used
 proj/celery_app.py
        │
        ▼
