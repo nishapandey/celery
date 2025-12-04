@@ -22,9 +22,20 @@ The Celery worker auto-discovers tasks from app1 and app2. This works because:
 2. app1 and app2 are listed in settings.py under INSTALLED_APPS: 'app1', 'app2'
 
 all the configs are read from main app (proj) settings.py
-# gmail_send/settings.py
 
+### Gmail Setup for Email Sending
 
+1. Create a Gmail account (or use an existing one)
+2. Enable 2-Step Verification: [Google Account Security](https://myaccount.google.com/security)
+3. Generate an App Password:
+   - Go to [App Passwords](https://myaccount.google.com/apppasswords)
+   - Select "Mail" and your device
+   - Copy the 16-character password
+4. Update `proj/settings.py`:
+   EMAIL_HOST_USER = 'your-email@gmail.com'
+   EMAIL_HOST_PASSWORD = 'xxxx xxxx xxxx xxxx'  # App password (not your Gmail password)
+   DEFAULT_FROM_EMAIL = 'your-email@gmail.com'
+   
 urls import views from app2
 
 Rabbit MQ commands:
