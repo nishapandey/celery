@@ -36,9 +36,9 @@ all the configs are read from main app (proj) settings.py
    EMAIL_HOST_PASSWORD = 'xxxx xxxx xxxx xxxx'  # App password (not your Gmail password)
    DEFAULT_FROM_EMAIL = 'your-email@gmail.com'
    
-urls import views from app2
+## urls import views from app2
 
-Rabbit MQ commands:
+## Rabbit MQ commands:
 
 sudo dnf install rabbitmq-server
 
@@ -60,7 +60,7 @@ sudo rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
 
 
 
-start locally:
+## start locally:
 update email/ app password/ to list in the settings.py
 
 python manage.py runserver
